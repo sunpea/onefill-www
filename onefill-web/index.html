@@ -11,104 +11,127 @@
             theme: {
                 extend: {
                     colors: {
-                        primary: '#4A90E2',
-                        secondary: '#50E3C2',
-                    }
+                        primary: '#3B82F6',
+                        secondary: '#10B981',
+                        dark: '#1F2937',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
                 }
             }
         }
     </script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        .gradient-bg {
+            background: linear-gradient(135deg, #3B82F6, #10B981);
+        }
+        .nav-scrolled {
+            background-color: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(5px);
+            -webkit-backdrop-filter: blur(5px);
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        }
+        header {
+            background-color: transparent;
+            transition: all 0.3s ease;
+        }
+    </style>
 </head>
-<body class="font-sans bg-gray-100">
-    <header class="bg-white shadow-md fixed top-0 left-0 right-0 z-50">
-        <nav class="container mx-auto px-6 py-2">
+<body class="font-sans bg-gray-50 text-dark">
+    <header class="fixed top-0 left-0 right-0 z-50">
+        <nav class="container mx-auto px-6 py-4">
             <ul class="flex justify-between items-center">
-                <li><a href="#home" class="text-primary font-bold text-xl">OneFill</a></li>
-                <li><a href="#features" class="text-gray-600 hover:text-primary">功能</a></li>
-                <li><a href="#guide" class="text-gray-600 hover:text-primary">使用指南</a></li>
-                <li><a href="#download" class="text-gray-600 hover:text-primary">下载</a></li>
-                <li><a href="#contact" class="text-gray-600 hover:text-primary">联系我们</a></li>
+                <li>
+                    <a href="#home" class="flex items-center text-white font-bold text-2xl">
+                        <i class="fas fa-fill-drip mr-2"></i> <!-- 添加的图标 -->
+                        <span>OneFill</span>
+                    </a>
+                </li>
+                <li><a href="#features" class="text-white hover:text-gray-200 transition duration-300">功能</a></li>
+                <li><a href="#guide" class="text-white hover:text-gray-200 transition duration-300">使用指南</a></li>
+                <li><a href="#download" class="text-white hover:text-gray-200 transition duration-300">下载</a></li>
+                <li><a href="#contact" class="text-white hover:text-gray-200 transition duration-300">联系我们</a></li>
             </ul>
         </nav>
     </header>
 
-    <main class="pt-10">
-        <section id="home" class="bg-primary text-white py-16">
+    <main>
+        <section id="home" class="gradient-bg text-white py-32">
             <div class="container mx-auto px-6 text-center">
-                <h1 class="text-4xl font-bold mb-4">OneFill 插件</h1>
-                <p class="text-xl mb-8">为设计师和产品经理打造的高效工具</p>
-                <a href="#download" class="bg-white text-primary font-bold py-2 px-4 rounded-full hover:bg-gray-200 transition duration-300">立即下载</a>
+                <h1 class="text-5xl font-bold mb-6">OneFill 插件</h1>
+                <p class="text-2xl mb-12">为设计师和产品经理打造的高效工具</p>
+                <a href="#download" class="bg-white text-primary font-bold py-3 px-8 rounded-full hover:bg-gray-100 transition duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1">立即下载</a>
             </div>
         </section>
 
-        <section id="features" class="py-20">
+        <section id="features" class="py-32">
             <div class="container mx-auto px-6">
-                <h2 class="text-3xl font-bold text-center mb-12">核心功能</h2>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
-                    <div class="bg-white rounded-lg shadow-md p-6">
-                        <div class="flex items-center mb-4">
-                            <i class="fas fa-language text-4xl text-primary mr-4"></i>
-                            <h3 class="text-2xl font-bold">文本翻译</h3>
+                <h2 class="text-4xl font-bold text-center mb-16">核心功能</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-16">
+                    <div class="bg-white rounded-lg shadow-xl p-8 transform hover:scale-105 transition duration-300">
+                        <div class="flex items-center mb-6">
+                            <i class="fas fa-language text-5xl text-primary mr-6"></i>
+                            <h3 class="text-2xl font-bold">一键文本翻译</h3>
                         </div>
-                        <p class="text-gray-600 mb-4">快速准确的多语言翻译功能，支持多种设计软件。</p>
-                        <!-- 添加功能截图或图标 -->
+                        <p class="text-gray-600 text-lg">快速准确的多语言翻译功能，支持多种设计软件。</p>
                     </div>
-                    <div class="bg-white rounded-lg shadow-md p-6">
-                        <div class="flex items-center mb-4">
-                            <i class="fas fa-database text-4xl text-primary mr-4"></i>
-                            <h3 class="text-2xl font-bold">模拟数据生成</h3>
+                    <div class="bg-white rounded-lg shadow-xl p-8 transform hover:scale-105 transition duration-300">
+                        <div class="flex items-center mb-6">
+                            <i class="fas fa-database text-5xl text-primary mr-6"></i>
+                            <h3 class="text-2xl font-bold">一键数据模拟</h3>
                         </div>
-                        <p class="text-gray-600 mb-4">一键生成逼真的模拟数据，提高设计效率。</p>
-                        <!-- 添加功能截图或图标 -->
+                        <p class="text-gray-600 text-lg">一键生成逼真的模拟数据，提高设计效率。</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="guide" class="bg-gray-200 py-20">
+        <section id="guide" class="bg-gray-100 py-32">
             <div class="container mx-auto px-6">
-                <h2 class="text-3xl font-bold text-center mb-12">使用指南</h2>
+                <h2 class="text-4xl font-bold text-center mb-16">使用指南</h2>
                 <!-- 添加安装步骤、使用方法和FAQ -->
             </div>
         </section>
 
-        <section id="download" class="py-20">
+        <section id="download" class="py-32">
             <div class="container mx-auto px-6 text-center">
-                <h2 class="text-3xl font-bold mb-8">安装 OneFill</h2>
-                <div class="flex justify-center space-x-8">
+                <h2 class="text-4xl font-bold mb-16">安装 OneFill</h2>
+                <div class="flex justify-center space-x-12">
                     <a href="#" class="flex flex-col items-center group">
-                        <div class="bg-primary text-white w-16 h-16 flex items-center justify-center rounded-full group-hover:bg-blue-600 transition duration-300">
-                            <i class="fab fa-figma text-3xl"></i>
+                        <div class="bg-primary text-white w-24 h-24 flex items-center justify-center rounded-full group-hover:bg-blue-600 transition duration-300 shadow-lg group-hover:shadow-xl">
+                            <i class="fab fa-figma text-4xl"></i>
                         </div>
-                        <span class="mt-2 font-bold">Figma</span>
+                        <span class="mt-4 font-bold text-lg">Figma</span>
                     </a>
                     <a href="#" class="flex flex-col items-center group">
-                        <div class="bg-primary text-white w-16 h-16 flex items-center justify-center rounded-full group-hover:bg-blue-600 transition duration-300">
-                            <i class="fas fa-pencil-ruler text-3xl"></i>
+                        <div class="bg-primary text-white w-24 h-24 flex items-center justify-center rounded-full group-hover:bg-blue-600 transition duration-300 shadow-lg group-hover:shadow-xl">
+                            <i class="fas fa-pencil-ruler text-4xl"></i>
                         </div>
-                        <span class="mt-2 font-bold">MasterGo</span>
+                        <span class="mt-4 font-bold text-lg">MasterGo</span>
                     </a>
                     <a href="#" class="flex flex-col items-center group">
-                        <div class="bg-primary text-white w-16 h-16 flex items-center justify-center rounded-full group-hover:bg-blue-600 transition duration-300">
-                            <i class="fas fa-paint-brush text-3xl"></i>
+                        <div class="bg-primary text-white w-24 h-24 flex items-center justify-center rounded-full group-hover:bg-blue-600 transition duration-300 shadow-lg group-hover:shadow-xl">
+                            <i class="fas fa-paint-brush text-4xl"></i>
                         </div>
-                        <span class="mt-2 font-bold">即时设计</span>
+                        <span class="mt-4 font-bold text-lg">即时设计</span>
                     </a>
                 </div>
-                <p class="mt-8 text-gray-600">选择您使用的设计工具，立即安装 OneFill 插件</p>
+                <p class="mt-12 text-gray-600 text-lg">选择您使用的设计工具，立即安 OneFill 插件</p>
             </div>
         </section>
 
-        <section id="contact" class="bg-gray-200 py-20">
+        <section id="contact" class="bg-gray-100 py-32">
             <div class="container mx-auto px-6">
-                <h2 class="text-3xl font-bold text-center mb-12">联系我们</h2>
+                <h2 class="text-4xl font-bold text-center mb-16">联系我们</h2>
                 <!-- 添加联系表单和客服支持信息 -->
             </div>
         </section>
     </main>
 
-    <footer class="bg-gray-800 text-white py-6">
+    <footer class="bg-dark text-white py-12">
         <div class="container mx-auto px-6 text-center">
             <p>&copy; 2023 OneFill. 保留所有权利。</p>
         </div>
@@ -123,6 +146,31 @@
                     behavior: 'smooth'
                 });
             });
+        });
+
+        // 添加滚动效果
+        const header = document.querySelector('header');
+        const navLinks = document.querySelectorAll('header nav a');
+        const logo = document.querySelector('header nav a span'); // 选择 logo 文字
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                header.classList.add('nav-scrolled');
+                navLinks.forEach(link => {
+                    link.classList.remove('text-white', 'hover:text-gray-200');
+                    link.classList.add('text-gray-800', 'hover:text-primary');
+                });
+                logo.classList.remove('text-white');
+                logo.classList.add('text-primary');
+            } else {
+                header.classList.remove('nav-scrolled');
+                navLinks.forEach(link => {
+                    link.classList.add('text-white', 'hover:text-gray-200');
+                    link.classList.remove('text-gray-800', 'hover:text-primary');
+                });
+                logo.classList.add('text-white');
+                logo.classList.remove('text-primary');
+            }
         });
     </script>
 </body>
