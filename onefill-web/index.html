@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OneFill 插件 - 设计师和产品经理的高效工具</title>
+    <meta name="description" content="OneFill插件为设计师和产品经理提供文本翻译和模拟数据生成功能，提高工作效率。">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#4A90E2',
+                        secondary: '#50E3C2',
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="font-sans bg-gray-100">
+    <header class="bg-white shadow-md fixed top-0 left-0 right-0 z-50">
+        <nav class="container mx-auto px-6 py-2">
+            <ul class="flex justify-between items-center">
+                <li><a href="#home" class="text-primary font-bold text-xl">OneFill</a></li>
+                <li><a href="#features" class="text-gray-600 hover:text-primary">功能</a></li>
+                <li><a href="#guide" class="text-gray-600 hover:text-primary">使用指南</a></li>
+                <li><a href="#download" class="text-gray-600 hover:text-primary">下载</a></li>
+                <li><a href="#contact" class="text-gray-600 hover:text-primary">联系我们</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="pt-10">
+        <section id="home" class="bg-primary text-white py-16">
+            <div class="container mx-auto px-6 text-center">
+                <h1 class="text-4xl font-bold mb-4">OneFill 插件</h1>
+                <p class="text-xl mb-8">为设计师和产品经理打造的高效工具</p>
+                <a href="#download" class="bg-white text-primary font-bold py-2 px-4 rounded-full hover:bg-gray-200 transition duration-300">立即下载</a>
+            </div>
+        </section>
+
+        <section id="features" class="py-20">
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl font-bold text-center mb-12">核心功能</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                    <div class="bg-white rounded-lg shadow-md p-6">
+                        <div class="flex items-center mb-4">
+                            <i class="fas fa-language text-4xl text-primary mr-4"></i>
+                            <h3 class="text-2xl font-bold">文本翻译</h3>
+                        </div>
+                        <p class="text-gray-600 mb-4">快速准确的多语言翻译功能，支持多种设计软件。</p>
+                        <!-- 添加功能截图或图标 -->
+                    </div>
+                    <div class="bg-white rounded-lg shadow-md p-6">
+                        <div class="flex items-center mb-4">
+                            <i class="fas fa-database text-4xl text-primary mr-4"></i>
+                            <h3 class="text-2xl font-bold">模拟数据生成</h3>
+                        </div>
+                        <p class="text-gray-600 mb-4">一键生成逼真的模拟数据，提高设计效率。</p>
+                        <!-- 添加功能截图或图标 -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="guide" class="bg-gray-200 py-20">
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl font-bold text-center mb-12">使用指南</h2>
+                <!-- 添加安装步骤、使用方法和FAQ -->
+            </div>
+        </section>
+
+        <section id="download" class="py-20">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-3xl font-bold mb-8">安装 OneFill</h2>
+                <div class="flex justify-center space-x-8">
+                    <a href="#" class="flex flex-col items-center group">
+                        <div class="bg-primary text-white w-16 h-16 flex items-center justify-center rounded-full group-hover:bg-blue-600 transition duration-300">
+                            <i class="fab fa-figma text-3xl"></i>
+                        </div>
+                        <span class="mt-2 font-bold">Figma</span>
+                    </a>
+                    <a href="#" class="flex flex-col items-center group">
+                        <div class="bg-primary text-white w-16 h-16 flex items-center justify-center rounded-full group-hover:bg-blue-600 transition duration-300">
+                            <i class="fas fa-pencil-ruler text-3xl"></i>
+                        </div>
+                        <span class="mt-2 font-bold">MasterGo</span>
+                    </a>
+                    <a href="#" class="flex flex-col items-center group">
+                        <div class="bg-primary text-white w-16 h-16 flex items-center justify-center rounded-full group-hover:bg-blue-600 transition duration-300">
+                            <i class="fas fa-paint-brush text-3xl"></i>
+                        </div>
+                        <span class="mt-2 font-bold">即时设计</span>
+                    </a>
+                </div>
+                <p class="mt-8 text-gray-600">选择您使用的设计工具，立即安装 OneFill 插件</p>
+            </div>
+        </section>
+
+        <section id="contact" class="bg-gray-200 py-20">
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl font-bold text-center mb-12">联系我们</h2>
+                <!-- 添加联系表单和客服支持信息 -->
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-gray-800 text-white py-6">
+        <div class="container mx-auto px-6 text-center">
+            <p>&copy; 2023 OneFill. 保留所有权利。</p>
+        </div>
+    </footer>
+
+    <script>
+        // 添加平滑滚动效果
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
